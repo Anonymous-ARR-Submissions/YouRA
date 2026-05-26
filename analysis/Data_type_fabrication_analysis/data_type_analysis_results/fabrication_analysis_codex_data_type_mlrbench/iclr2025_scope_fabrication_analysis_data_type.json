@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_scope/iclr2025_scope.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "Real benchmark data is loaded in /home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope/claude_code/run_experiment.py:15 via `from datasets import load_dataset`.",
+      "The experiment runner loads Hugging Face datasets in /home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope/claude_code/run_experiment.py:459 (`load_dataset(\"narrativeqa\", split='test', trust_remote_code=True)`) with fallback to /home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope/claude_code/run_experiment.py:486 (`load_dataset(\"squad\", split='validation')`).",
+      "The main experiment saves computed outputs to /home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope/claude_code/run_experiment.py:575-577 by writing `experiment_results.json` after evaluating methods.",
+      "The execution log shows the run actually loaded benchmark data and completed: /home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope/claude_code/log.txt:33 (`Loaded 200 samples from NarrativeQA`), :34 (`Train samples: 140`), :35 (`Test samples: 60`), :134 (`Results saved to ./experiment_results.json`), :147 (`Experiment completed successfully!`)."
+    ]
+  }
+}

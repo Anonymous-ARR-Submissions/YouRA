@@ -1,0 +1,16 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_buildingtrust.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_13-19-29_uncertainty_communication_design_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py:59 - function generate_modality_aware_data() generates all features synthetically: llm_certainty = np.random.beta(3, 2), task_difficulty = np.random.beta(2, 3), user_expertise = np.random.beta(2, 2)",
+      "experiment_code.py:75 - llm_correct = int(np.random.random() < (0.6 + 0.3 * llm_certainty)) - ground truth correctness is synthetically generated",
+      "experiment_code.py:9 - from datasets import load_dataset - HuggingFace datasets are imported",
+      "experiment_code.py:382 - squad_dataset = load_dataset('squad', split='validation') - real datasets are loaded but only used for len(hf_dataset) to determine sample count",
+      "experiment_code.py:63 - n_samples = min(n_samples, len(hf_dataset)); indices = np.random.choice(len(hf_dataset), n_samples, replace=False) - only the dataset size is used, not actual text content",
+      "experiment_code.py:71-97 - All training features (llm_certainty, task_difficulty, user_expertise, llm_correct, optimal_modality, user_decision) are generated via np.random distributions, independent of actual dataset content",
+      "Multiple experiment_data.npy files exist in logs/0-run/experiment_results/ confirming experiments were actually executed"
+    ]
+  }
+}

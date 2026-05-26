@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_mldpr.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0/logs/0-run/experiment_results/experiment_19340af3e3654a6c9a8ede5d7d2d00c8_proc_951032/experiment_code.py:15-16 stores results under a synthetic_dataset key.",
+      "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0/logs/0-run/experiment_results/experiment_19340af3e3654a6c9a8ede5d7d2d00c8_proc_951032/experiment_code.py:25-41 seeds NumPy RNG and creates the base dataset with np.random.randn / np.random.randint / np.random.choice.",
+      "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0/logs/0-run/experiment_results/experiment_19340af3e3654a6c9a8ede5d7d2d00c8_proc_951032/experiment_code.py:662-663 saves experiment_data.npy, showing the experiment was actually executed rather than only described.",
+      "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0/logs/0-run/baseline_summary.json:3 describes the baseline as evaluating change detection in synthetic tabular datasets and generating dataset versions with known modifications.",
+      "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0/logs/0-run/experiment_results/experiment_19340af3e3654a6c9a8ede5d7d2d00c8_proc_951032/experiment_data.npy and experiment_4d536824a5ba4c32a54ad6d3c64df5c3_proc_11275/experiment_data.npy load successfully as dictionaries keyed by column_selection_strategy/change_detection_latency -> synthetic_dataset -> metrics."
+    ]
+  }
+}

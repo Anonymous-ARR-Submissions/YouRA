@@ -1,0 +1,18 @@
+{
+  "paper_file": "FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_data_problems.pdf",
+  "experiment_folder": "experiments_sonnet45/2026-05-12_00-43-10_representation_guided_data_mixing_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py:100 - Wikipedia domain uses np.random.randint(50, 200, seq_len) to generate synthetic token sequences",
+      "experiment_code.py:102 - Code domain uses np.random.randint(200, 300, seq_len // 4) with np.tile for synthetic repetitive patterns",
+      "experiment_code.py:107-108 - Scientific domain uses np.random.randint for two concatenated ranges (300-350, 350-400)",
+      "experiment_code.py:112 - Conversational domain uses np.random.randint(400, 450, seq_len)",
+      "experiment_code.py:88-95 - TinyStories and OpenWebText attempt load_dataset() but with bare except fallback to None (synthetic fallback at lines 123, 134)",
+      "experiment_code.py:116,127 - Even when real data loads, 'tokenization' is just ord(c) % vocab_size (character ordinal mod 500), not actual tokenization",
+      "experiment_code.py:73 - num_samples_per_domain=400, seq_len=32, vocab_size=500 — tiny synthetic-scale parameters",
+      "4 of 6 domains always generate purely random integer sequences; 2 domains have unreliable real-data loading with synthetic fallback",
+      "experiment_data.npy files exist confirming experiments were actually executed (not fabricated)"
+    ]
+  }
+}

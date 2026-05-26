@@ -1,0 +1,16 @@
+{
+  "paper_file": "/home/anonymous/ai_scientist/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_scope.pdf",
+  "experiment_folder": "/home/anonymous/ai_scientist/experiments_sonnet45/2026-05-18_06-11-49_sparse_routing_peft_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiments/best_solution_cb5e6391d2b247798d45c536c8370a75.py:9 — 'from datasets import load_dataset' imports HuggingFace datasets library",
+      "experiments/best_solution_cb5e6391d2b247798d45c536c8370a75.py:326 — 'imdb_data = load_dataset(\"imdb\", split=\"train[:2000]\")' loads real IMDB dataset",
+      "experiments/best_solution_cb5e6391d2b247798d45c536c8370a75.py:331 — 'agnews_data = load_dataset(\"ag_news\", split=\"train[:2000]\")' loads real AG News dataset",
+      "experiments/best_solution_cb5e6391d2b247798d45c536c8370a75.py:336 — 'sst2_data = load_dataset(\"glue\", \"sst2\", split=\"train[:2000]\")' loads real SST-2/GLUE dataset",
+      "experiments/best_solution_cb5e6391d2b247798d45c536c8370a75.py:140 — torch.randn used only for gate parameter initialization (not synthetic data generation)",
+      "experiment_data.npy files exist with actual training results across multiple experiment runs, confirming experiments were executed (e.g. baseline_cosine_annealing/imdb: val_acc=1.0, sparsity=0.9568, 6 epochs; agnews: val_acc=0.8775, sparsity=0.8092, 15 epochs; sst2: val_acc=0.8000, sparsity=0.8060, 9 epochs)",
+      "Multiple .pt model checkpoint files exist (e.g. imdb_best_model.pt, agnews_best_model.pt, sst2_best_model.pt) confirming actual model training occurred"
+    ]
+  }
+}

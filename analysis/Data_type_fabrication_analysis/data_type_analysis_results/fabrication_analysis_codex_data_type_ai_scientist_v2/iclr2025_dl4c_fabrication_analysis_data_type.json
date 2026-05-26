@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_dl4c.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_07-42-16_failure_aware_code_generation_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py lines 17-55 initialize three evaluated datasets: synthetic_code_generation, code_contests, and mbpp.",
+      "experiment_code.py lines 199-248 load Code Contests from HuggingFace via load_dataset(\"deepmind/code_contests\", split=\"test\").",
+      "experiment_code.py lines 325-384 load MBPP from HuggingFace via load_dataset(\"mbpp\", split=\"test\").",
+      "Saved run artifact logs/0-run/experiment_results/experiment_17084af3bb5b4dfaae9d43a720a6f12e_proc_3870783/experiment_data.npy contains non-fallback ground truth entries, including a Code Contests description beginning \"Andi and Budi were given an assignment to tidy up their bookshelf...\" and an MBPP description beginning \"Write a python function to remove first and last occurrence...\".",
+      "The experiment was actually executed and persisted results: logs/0-run/experiment_results/.../experiment_data.npy exists for many runs, and logs/0-run/research_summary.json reports baseline and FACG metrics for synthetic_code_generation, code_contests, and mbpp."
+    ]
+  }
+}

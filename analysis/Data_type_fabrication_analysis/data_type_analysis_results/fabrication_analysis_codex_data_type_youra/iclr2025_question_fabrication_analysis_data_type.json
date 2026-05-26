@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_question.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_question/docs/youra_research/20260318_question",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data.py:84-108 loads torchvision MNIST and FashionMNIST datasets with download=True.",
+      "h-m2/code/data_loader.py:19-24 maps both mnist and mnist_alt to datasets.MNIST(...), so H-M2 still uses a real dataset rather than synthetic generation.",
+      "h-m3/code/data_loader.py:22-73 loads downstream inputs from the h-e1 CSV via pd.read_csv instead of generating synthetic samples.",
+      "h-e1/code/results/experiment_logs.csv:1-6 contains recorded seed-wise MNIST accuracies, confirming executed runs.",
+      "h-m2/results/*/seed_*/loss_history.npy and h-m1/results/pairwise_distances_*.npy exist as saved experiment artifacts."
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_verifai.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_verifai/docs/youra_research/20260318_verifai",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "Pattern 'get_human_eval_plus' is used in h-e1/code/run_experiment.py within HumanEvalLoader/load_problems, which loads HumanEval+/HumanEval tasks and then runs the H-E1 experiment over all problems before saving outputs/results.json.",
+      "h-e1/code/outputs/results.json reports total_tasks=164, qualified_tasks=35, target_n=20, and gate_result='PASS'; h-e1/code/experiment.log records 'Loaded 164 tasks from HumanEval+' and 'Qualified tasks: N = 35'.",
+      "h-m1/code/run_experiment_h_m1.py states it analyzes mypy detection rates on REAL HumanEval data, loads HumanEval+ via evalplus, and h-m1/code/outputs/results.json reports overall_detection_rate=99.57142857142857, total_mypy_errors=697, total_iterations=700, and task_count=35.",
+      "h-m3/code/run_mock_experiment.py is explicitly mock/simulated: MockMypyVerifier.verify and MockPytestVerifier.verify use random.random(), MockPipeline/run labels the run as MOCK, and h-m3/code/outputs/experiment_results.json records mode='MOCK' and efficiency_ratio=0.7333333333333333.",
+      "Overall classification is Real because the paper's executed H-E1 and H-M1 branches are benchmark-backed HumanEval/HumanEval+ experiments; the H-M3 mock branch is a disclosed auxiliary simulation rather than the main dataset source."
+    ]
+  }
+}

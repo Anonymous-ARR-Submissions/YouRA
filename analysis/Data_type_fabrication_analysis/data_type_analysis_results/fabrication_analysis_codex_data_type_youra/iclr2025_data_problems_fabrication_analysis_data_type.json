@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_data_problems.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_data_problems/docs/youra_research/20260317_data_problems",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1-v2/code/data_collection.py:24-34 loads the real `open-llm-leaderboard/contents` dataset via `datasets.load_dataset(config.LEADERBOARD_DATASET, split=\"train\")` and converts it to a pandas DataFrame.",
+      "h-e1-v2/code/data_collection.py:125-191 retrieves real Hugging Face model cards and model metadata via `ModelCard.load` and `HfApi.model_info`; no synthetic generators or mock datasets appear in the live pipeline.",
+      "h-e1-v2/code/experiment.log:64-130 records an actual run that loaded 4,576 leaderboard rows, retrieved 3,749 model cards, exported `h-e1-v2/data/registry.csv`, saved `summary_stats.json`, and generated figures.",
+      "h-e1-v2/experiment_results.json:2-35 marks the pipeline `status` as `completed` with `pipeline_version` `h-e1-v2`, `n_analyzable` 4493, and `total_retrieved` 3749."
+    ]
+  }
+}

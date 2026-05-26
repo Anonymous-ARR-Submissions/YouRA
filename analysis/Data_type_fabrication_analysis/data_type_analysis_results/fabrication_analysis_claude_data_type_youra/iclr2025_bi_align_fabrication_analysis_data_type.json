@@ -1,0 +1,15 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_bi_align.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_bi_align/docs/youra_research/20260317_bi_align",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data_loader.py:32 — load_dataset('Anthropic/hh-rlhf') uses HuggingFace datasets library to download the real Anthropic HH-RLHF dataset",
+      "h-m-integrated/code/paired_data_loader.py:40-41 — PairedDataLoader wraps HHRLHFDataLoader, iterating over real dataset splits via base_loader.datasets.items()",
+      ".data_cache/datasets/hh-rlhf/Anthropic___hh-rlhf/ — contains actual downloaded Arrow files: hh-rlhf-train.arrow (308MB) and hh-rlhf-test.arrow (16MB)",
+      "h-m-integrated/results/statistics.json:5-9 — dataset name 'Anthropic/hh-rlhf' with total_pairs=169352 (train=160800, test=8552), matching real HH-RLHF dataset dimensions",
+      "h-e1/code/main.py:51-59 — loads dataset via HHRLHFDataLoader().load_dataset(), then samples 10K responses from full dataset for H-E1 PoC",
+      "No np.random data generation, SyntheticDataset, or hardcoded result arrays found in any experiment code"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_wsl.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_wsl.md:5 and :141 report overall rho=0.294 (95% CI -0.056 to 0.586); /home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl/h-e1/experiment_results.json:18-24,43-55 contains the same overall metric and explicitly labels dataset.type as synthetic with limitation 'Synthetic dataset vs. real model weights'.",
+      "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl/h-e1/code/cawe/data/loader.py:308-347 falls back to _get_noise_based_gap() and np.random.uniform(...) when ImageNet is unavailable.",
+      "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl/h-e1/code/experiment_run_fixed.log:47-136 repeatedly logs 'ImageNet dataset not found at ./data/imagenet. Using noise-based gap estimation.', indicating the executed h-e1 run used synthetic gap labels for CNN/ViT models.",
+      "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl/h-m-integrated/code/cawe/data/loader.py:309-339 later switches the fallback to real CIFAR-10 evaluation, but /home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl/h-m-integrated/code/outputs/evaluation_results.json:2-6 reports rho=0.7028 with n_samples=60, which does not match the paper's rho=0.294/n=30. The paper therefore aligns with the synthetic-backed h-e1 artifact, not the real-data output."
+    ]
+  }
+}

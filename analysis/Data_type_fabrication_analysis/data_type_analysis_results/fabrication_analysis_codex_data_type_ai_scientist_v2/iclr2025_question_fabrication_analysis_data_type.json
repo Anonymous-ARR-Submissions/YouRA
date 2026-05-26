@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_question.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_07-42-16_layer_consensus_decoding_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "The paper-driving aggregator loads real benchmark experiment outputs from `experiment_results/experiment_6fd921fbcce34b679f5e249799fc0b0c_proc_3898697/experiment_data.npy`, `experiment_22c9f145ae1f406f95d63792ae4aba89_proc_3972065/experiment_data.npy`, and `experiment_724c65442cee40689b72fd9402fd76b6_proc_3972751/experiment_data.npy` in `experiments_sonnet45/2026-05-13_07-42-16_layer_consensus_decoding_attempt_0/auto_plot_aggregator.py:21-35`.",
+      "The main research experiment imports HuggingFace datasets and loads real benchmarks via `load_dataset(\"trivia_qa\", ...)`, `load_dataset(\"boolq\", ...)`, and `load_dataset(\"commonsense_qa\", ...)` in `experiments_sonnet45/2026-05-13_07-42-16_layer_consensus_decoding_attempt_0/logs/0-run/experiment_results/experiment_6fd921fbcce34b679f5e249799fc0b0c_proc_3898697/experiment_code.py:15,84-90`.",
+      "Ablation experiments used for paper figures also load the same real benchmarks from HuggingFace in `.../experiment_724c65442cee40689b72fd9402fd76b6_proc_3972751/experiment_code.py:108-113` and `.../experiment_22c9f145ae1f406f95d63792ae4aba89_proc_3972065/experiment_code.py:88-93`.",
+      "Saved result objects for the paper-facing experiments contain real-dataset keys `trivia_qa`, `boolq`, and `commonsense_qa` rather than synthetic placeholders; e.g. `experiment_6fd921fbcce34b679f5e249799fc0b0c_proc_3898697/experiment_data.npy` and `experiment_724c65442cee40689b72fd9402fd76b6_proc_3972751/experiment_data.npy` both load with keys `['boolq', 'commonsense_qa', 'trivia_qa']`.",
+      "The folder does contain an earlier synthetic baseline (`experiment_b304a37706ef4145960975b0abcf65f8_proc_3841706/experiment_code.py:21-32` defines only `synthetic_qa` and a hand-written QA list), but that is not the data source for the paper's reported main results."
+    ]
+  }
+}

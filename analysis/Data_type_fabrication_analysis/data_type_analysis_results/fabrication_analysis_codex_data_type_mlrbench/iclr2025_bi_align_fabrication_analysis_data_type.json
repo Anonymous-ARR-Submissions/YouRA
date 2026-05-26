@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_bi_align/iclr2025_bi_align.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/value_evolution.py:10 defines `ValueEvolutionSimulator` with the docstring \"Simulates human preference evolution over time\".",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/value_evolution.py:20-28 initializes preferences with `np.random.seed(seed)`, `np.random.randn(...)`, and random contextual preference matrices.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/value_evolution.py:97-99 generates each state with `np.random.randn(self.feature_dim)`.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/value_evolution.py:101-143 generates full user trajectories by sampling random contexts, random states, and scenario-specific preference evolution.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/value_evolution.py:155-194 generates training batches by randomly sampling users, timesteps, contexts, and states rather than loading a real dataset.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/run_experiment.py:95-101 creates an `InteractionEnvironment(...)` and trains directly from `environment.generate_batch_data(...)`; no real dataset loader is present.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/log.txt contains executed training/evaluation logs such as `Adaptive Alignment Experiment`, `Running scenario: gradual_drift`, and per-epoch losses, confirming the synthetic experiment was actually run.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align/claude_code/results.json stores produced metrics for `gradual_drift`, `rapid_shift`, and `value_conflict`, confirming real execution outputs exist."
+    ]
+  }
+}

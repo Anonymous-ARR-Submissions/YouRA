@@ -1,0 +1,15 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_wsl.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py:56-61 — torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform) used to load real CIFAR-10 dataset",
+      "0-run/process_SpawnProcess-1/data/cifar-10-batches-py/ — actual CIFAR-10 data batches present on disk (data_batch_1 through data_batch_5, test_batch)",
+      "0-run/process_SpawnProcess-13/data/cifar-100-python/ — CIFAR-100 real dataset also present for ablation experiments",
+      "0-run/process_SpawnProcess-13/data/FashionMNIST/raw/ — FashionMNIST real dataset present",
+      "0-run/process_SpawnProcess-13/data/train_32x32.mat — SVHN real dataset present",
+      "experiment_code.py:62-63 — train_subset = torch.utils.data.Subset(trainset, range(5000)); test_subset = torch.utils.data.Subset(testset, range(1000))"
+    ]
+  }
+}

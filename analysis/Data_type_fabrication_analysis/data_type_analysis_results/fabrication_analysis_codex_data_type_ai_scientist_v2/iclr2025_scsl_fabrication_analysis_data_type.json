@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_scsl.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_16-14-58_ssl_pretraining_shortcuts_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "Real-data loading is explicit in logs/0-run/experiment_results/experiment_06d3877e417d4a3e84dbffee9f553746_proc_312414/experiment_code.py:9 (`from datasets import load_dataset`).",
+      "The experiment code loads real benchmark datasets in logs/0-run/experiment_results/experiment_06d3877e417d4a3e84dbffee9f553746_proc_312414/experiment_code.py:41 (`load_dataset(\"mnist\", ...)`), :92 (`load_dataset(\"cifar10\", ...)`), and :148 (`load_dataset(\"fashion_mnist\", ...)`).",
+      "Synthetic manipulation is applied on top of those real datasets via randomized spurious-attribute assignment in logs/0-run/experiment_results/experiment_06d3877e417d4a3e84dbffee9f553746_proc_312414/experiment_code.py:60, :109, and :166 (`np.random.rand() < spurious_corr`), so the setup uses real base data with synthetic correlations rather than fully synthetic data.",
+      "Saved execution artifacts exist, including logs/0-run/experiment_results/experiment_06d3877e417d4a3e84dbffee9f553746_proc_312414/experiment_data.npy and logs/0-run/research_summary.json, indicating the reported values were produced by actual runs rather than only hardcoded paper numbers."
+    ]
+  }
+}

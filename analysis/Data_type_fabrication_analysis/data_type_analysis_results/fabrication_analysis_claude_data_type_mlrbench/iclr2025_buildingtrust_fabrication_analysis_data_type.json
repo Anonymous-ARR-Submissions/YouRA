@@ -1,0 +1,18 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_buildingtrust/iclr2025_buildingtrust.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "data_processing.py:23 - load_trivia_qa() attempts datasets.load_dataset('trivia_qa', 'rc.nocontext', split='validation') for real dataset loading, but falls back to synthetic on failure",
+      "data_processing.py:54 - load_commonsense_qa() attempts datasets.load_dataset('commonsense_qa', split='validation') for real dataset loading, but falls back to synthetic on failure",
+      "data_processing.py:91-118 - _create_synthetic_trivia_qa() creates hardcoded synthetic QA pairs as fallback",
+      "mock_models.py:12-15 - MockModelSystem.__init__() uses random.seed(seed) for deterministic simulated responses",
+      "mock_models.py:63-82 - MockModelSystem.query_model() generates simulated LLM responses via hash-based deterministic answer variants, not real API calls",
+      "run_experiment_mock.py:74-100 - step2_query_models() uses MockModelSystem to simulate model responses instead of real LLM APIs",
+      "log.txt:1 - Header reads 'ADAPTIVE CONFIDENCE CALIBRATION EXPERIMENT (MOCK MODELS)'",
+      "log.txt:14-29 - All three splits use 'QUERYING MOCK MODELS' confirming no real LLM API calls",
+      "log.txt:116 - Experiment completed in 0.5 minutes, consistent with simulated (not real API) execution"
+    ]
+  }
+}

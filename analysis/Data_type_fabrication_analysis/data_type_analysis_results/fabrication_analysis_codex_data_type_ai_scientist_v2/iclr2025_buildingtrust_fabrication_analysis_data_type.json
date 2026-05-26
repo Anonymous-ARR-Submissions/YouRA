@@ -1,0 +1,12 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_buildingtrust.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_13-19-29_uncertainty_communication_design_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiments_sonnet45/2026-05-13_13-19-29_uncertainty_communication_design_attempt_0/logs/0-run/experiment_results/experiment_c10d520c913a409b8c4480aeb0bad74e_proc_215409/experiment_code.py:64-123 defines `generate_realistic_data`, which samples collaboration variables with `np.random.beta`, `np.random.normal`, `np.random.choice`, and `np.random.random` to create features, correctness, modality, and user decisions.",
+      "experiments_sonnet45/2026-05-13_13-19-29_uncertainty_communication_design_attempt_0/logs/0-run/experiment_results/experiment_c10d520c913a409b8c4480aeb0bad74e_proc_215409/experiment_code.py:443-553 loads HuggingFace datasets (`load_dataset(\"squad\")`, `load_dataset(\"boolq\")`, `load_dataset(\"hellaswag\")`) and then routes them through `generate_realistic_data(...)`, so the evaluated collaboration outcomes are generated rather than observed from real users.",
+      "experiments_sonnet45/2026-05-13_13-19-29_uncertainty_communication_design_attempt_0/logs/0-run/experiment_results/experiment_c10d520c913a409b8c4480aeb0bad74e_proc_215409/experiment_code.py:838 saves `experiment_data.npy`, and the saved artifact loads as a dict with keys `squad`, `boolq`, and `hellaswag`, confirming the experiment was actually run and persisted."
+    ]
+  }
+}

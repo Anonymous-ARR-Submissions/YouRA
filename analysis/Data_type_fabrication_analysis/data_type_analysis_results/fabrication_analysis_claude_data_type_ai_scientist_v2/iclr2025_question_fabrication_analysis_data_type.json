@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_question.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_07-42-16_layer_consensus_decoding_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_6fd921fbcce34b679f5e249799fc0b0c (research/main experiment): uses load_dataset('trivia_qa', 'unfiltered.nocontext', split='validation[:200]') at line 88",
+      "experiment_6fd921fbcce34b679f5e249799fc0b0c: uses load_dataset('boolq', split='validation[:200]') at line 91",
+      "experiment_6fd921fbcce34b679f5e249799fc0b0c: uses load_dataset('commonsense_qa', split='validation[:200]') at line 92",
+      "experiment_6fd921fbcce34b679f5e249799fc0b0c: uses model_name = 'mistralai/Mistral-7B-Instruct-v0.1' at line 95",
+      "experiment_6fd921fbcce34b679f5e249799fc0b0c: from datasets import load_dataset at line 15 — HuggingFace datasets library",
+      "Multiple experiment_data.npy files generated confirming actual execution occurred",
+      "Multiple per-dataset PNG visualization files generated (trivia_qa_comprehensive_analysis.png, boolq_comprehensive_analysis.png, etc.)",
+      "Early baseline experiment (experiment_b304a37...) used synthetic QA + GPT-2, but auto_plot_aggregator.py uses 'research' experiment as main_data_key, confirming real-dataset experiment is the primary source"
+    ]
+  }
+}

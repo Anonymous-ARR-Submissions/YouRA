@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_wsl/iclr2025_wsl.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl/claude_code/data_generator.py:166 says the code creates base models with 'random initializations', not a loaded external dataset.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl/claude_code/data_generator.py:236-318 generates the full dataset in code: base models, symmetry variants, and backdoored models, then writes dataset_info.json.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl/claude_code/data_generator.py pattern matches `np.random.uniform` and `torch.randn_like` for scaling, noise perturbations, and backdoor injection, indicating synthetic manipulations rather than real data loading.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl/claude_code/config.py:17 sets `ARCHITECTURES = ['mlp']`, and there is no `datasets.load_dataset`, `torchvision.datasets`, or `pd.read_csv` usage in the experiment runner/data generator.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl/results/log.txt shows an actual run on 2026-01-29 with 'Generating dataset...', 'Training GNN fingerprinting model...', and final results, so the experiments were executed rather than purely hardcoded."
+    ]
+  }
+}

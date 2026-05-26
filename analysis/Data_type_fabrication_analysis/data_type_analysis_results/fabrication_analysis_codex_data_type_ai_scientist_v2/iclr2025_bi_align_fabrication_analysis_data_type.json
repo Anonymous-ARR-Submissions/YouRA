@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_bi_align.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_13-19-29_adaptive_ai_assertiveness_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "Actual experiment artifacts exist under logs/0-run/experiment_results/, including multiple experiment_data.npy files and experiment_code.py files, so the results were not paper-only fabrications.",
+      "experiments_sonnet45/2026-05-13_13-19-29_adaptive_ai_assertiveness_attempt_0/logs/0-run/experiment_results/experiment_e13718ec1c204621b1e2d7c08442eb35_proc_84498/experiment_code.py:57-65 defines generate_decision_task_data() and uses np.random.randn to create features, weights, and noisy logits.",
+      "experiments_sonnet45/2026-05-13_13-19-29_adaptive_ai_assertiveness_attempt_0/logs/0-run/experiment_results/experiment_e13718ec1c204621b1e2d7c08442eb35_proc_84498/experiment_code.py:114-115 prints \"Generating synthetic decision-making data...\" and calls generate_decision_task_data(...).",
+      "experiments_sonnet45/2026-05-13_13-19-29_adaptive_ai_assertiveness_attempt_0/logs/0-run/experiment_results/experiment_e13718ec1c204621b1e2d7c08442eb35_proc_84498/experiment_code.py:426-428 saves the run output to experiment_data.npy, confirming actual execution outputs were produced.",
+      "experiments_sonnet45/2026-05-13_13-19-29_adaptive_ai_assertiveness_attempt_0/logs/0-run/draft_summary.json:1 states the experiments used \"synthetic data simulating binary classification tasks\"."
+    ]
+  }
+}

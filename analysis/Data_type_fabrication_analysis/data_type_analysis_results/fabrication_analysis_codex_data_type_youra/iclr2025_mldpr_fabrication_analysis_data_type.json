@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_mldpr.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_mldpr/docs/youra_research/20260318_mldpr",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data/data_collector.py:87,103 query the HuggingFace Hub API (`https://huggingface.co/api/datasets`), and :215 queries the OpenML API (`https://www.openml.org/api/v1/json/data/list/limit/100`).",
+      "h-e1/code/data/metadata_sample/metadata_fields.csv:1,5,6,12 contain real repository metadata fields from the collected sample (`description`, `usedStorage`, `author`, `cardData`).",
+      "h-m-integrated/code/data/data_loader.py:34-38 loads the saved metadata dataset from `dataset_path` with `pd.read_csv(csv_path)`, so the downstream clustering/probe experiment runs on the collected metadata CSV rather than on hardcoded result arrays.",
+      "h-e1/code/data/data_collector.py:257,361 warn `Using minimal fallback`; the saved CSV shows repeated UCI fallback rows at h-e1/code/data/metadata_sample/metadata_fields.csv:309-358 (`Academic use only`, `IRB Approved`, `Iris`, `Multivariate`, `150`).",
+      "h-e1/code/data/annotation_protocol.py:56 says the annotation generator is 'for testing only' and :98,:136 sample annotation values with `np.random.random()`, so the real metadata are paired with synthetic annotation components."
+    ]
+  }
+}

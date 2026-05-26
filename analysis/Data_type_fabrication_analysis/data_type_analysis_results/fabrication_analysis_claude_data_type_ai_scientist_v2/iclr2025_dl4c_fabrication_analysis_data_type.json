@@ -1,0 +1,16 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_dl4c.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_07-42-16_failure_aware_code_generation_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py:566-572 - generate_code_baseline() uses random.random() < baseline_success_rate to determine pass/fail outcomes rather than actual LLM code generation",
+      "experiment_code.py:575-584 - generate_code_with_facg() similarly uses random.random() < facg_success_rate to simulate outcomes",
+      "experiment_code.py:108-196 - create_synthetic_dataset() creates hand-crafted synthetic problems with hardcoded test cases",
+      "experiment_code.py:15-16 - random.seed(42) and np.random.seed(42) used for reproducible random sampling",
+      "experiment_code.py:644-651 - Hyperparameter configs define fixed success rates (0.65 baseline, 0.75-0.95 FACG) that determine outcomes via random sampling",
+      "experiment_code.py:199-251 - load_code_contests_dataset() attempts to load real dataset but the experimental outcome is still simulated via random sampling",
+      "experiment_code.py:325-387 - load_mbpp_dataset() attempts to load real dataset but experimental evaluation is simulated"
+    ]
+  }
+}

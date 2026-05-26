@@ -1,0 +1,16 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_bi_align/iclr2025_bi_align.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_bi_align",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "value_evolution.py:22 — core preferences initialized with np.random.randn(feature_dim, action_dim)",
+      "value_evolution.py:26-28 — context preferences generated with np.random.randn(feature_dim, action_dim) * 0.3",
+      "value_evolution.py:88 — np.random.seed(seed) used for reproducibility",
+      "value_evolution.py:92-94 — InteractionEnvironment creates ValueEvolutionSimulator for each user with synthetic random preferences",
+      "run_experiment.py:97-104 — InteractionEnvironment initialized with synthetic parameters (num_users=50, feature_dim=20, action_dim=10)",
+      "No real datasets (CIFAR, HumanEval, torchvision, datasets.load_dataset) are used anywhere in the codebase",
+      "All data is generated via numpy random distributions and stochastic preference evolution simulation"
+    ]
+  }
+}

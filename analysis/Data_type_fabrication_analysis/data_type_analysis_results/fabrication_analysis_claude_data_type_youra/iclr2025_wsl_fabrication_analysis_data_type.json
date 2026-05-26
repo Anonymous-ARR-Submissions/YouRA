@@ -1,0 +1,18 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_wsl.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_wsl/docs/youra_research/20260319_wsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_results.json:44 — dataset.type explicitly declared as 'synthetic'",
+      "experiment_results.json:52 — poc_limitations includes 'Synthetic dataset vs. real model weights'",
+      "h-e1/code/cawe/data/loader.py:308-316 — _get_imagenet_gap() falls back to _get_noise_based_gap() when ImageNet is unavailable",
+      "h-e1/code/cawe/data/loader.py:318-349 — _get_noise_based_gap() generates synthetic gap labels using base_gap heuristics + np.random.uniform noise",
+      "h-e1/MOCK_FIX_ATTEMPT_5_COMPLETE.md:276 — confirms 'ImageNet: Not available (using noise-based fallback)'",
+      "h-e1/code/cawe/data/loader.py:100 — CNN models loaded from torchvision with pretrained=True (real weights)",
+      "h-e1/code/cawe/data/loader.py:136 — ViT models loaded from timm with pretrained=True (real weights)",
+      "h-e1/code/cawe/data/loader.py:161 — MLP models trained on real MNIST (datasets.MNIST download=True)",
+      "Model weights are real (torchvision, timm, MNIST-trained), but generalization gap labels (the prediction target) are synthetically generated via noise-based fallback — making the overall experiment Synthetic"
+    ]
+  }
+}

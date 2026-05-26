@@ -1,0 +1,16 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_scsl.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_16-14-58_ssl_pretraining_shortcuts_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py (experiment_06d3877e417d4a3e84dbffee9f553746):line 9 - 'from datasets import load_dataset'",
+      "experiment_code.py:line 41 - 'mnist = load_dataset(\"mnist\", split=\"train\" if split == \"train\" else \"test\")'",
+      "experiment_code.py:line 92 - 'cifar = load_dataset(\"cifar10\", split=\"train\" if split == \"train\" else \"test\")'",
+      "experiment_code.py:line 149 - 'fashion = load_dataset(\"fashion_mnist\", split=\"train\" if split == \"train\" else \"test\")'",
+      "Real datasets (MNIST, CIFAR-10, Fashion-MNIST) loaded via HuggingFace datasets library with synthetic spurious correlations (color, background patterns, local stamps) applied on top",
+      "process_SpawnProcess-3/data/MNIST/raw/ directory exists confirming actual dataset download occurred",
+      "Multiple result JSON files exist in process_SpawnProcess-* directories confirming experiments were executed"
+    ]
+  }
+}

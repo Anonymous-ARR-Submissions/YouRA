@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_scope.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_scope/docs/youra_research/20260318_scope",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-m1/code/run_weight_analysis.py:141-149 states \"Dataset: Not required (analyzing learned weights directly)\" and loads the real pretrained model via AutoModelForCausalLM.from_pretrained(\"mistralai/Mistral-7B-v0.1\").",
+      "h-m1/code/run_weight_analysis.py:191-195 writes ../results/mechanism_validation.json and ../experiment_results.json; h-m1/experiment_results.json records completed_at=2026-03-18T04:55:44.444844 with measured max_rank and entropy_slope values.",
+      "h-m1/experiment_weight_analysis.log records an executed run with per-layer ranks 1554.33-1647.67 and regression beta=0.001453, p=7.202766e-02, confirming actual computation rather than paper-only numbers.",
+      "h-e1/code/src/data.py:28-30 streams the real OpenWebText corpus via load_dataset(\"openwebtext\", split=\"train\", streaming=True) for the data-based validation path."
+    ]
+  }
+}

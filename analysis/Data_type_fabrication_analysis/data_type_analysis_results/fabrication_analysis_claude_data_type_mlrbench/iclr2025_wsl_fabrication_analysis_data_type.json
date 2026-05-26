@@ -1,0 +1,18 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_wsl/iclr2025_wsl.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_wsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "data_generator.py:166-181 — create_base_models() creates SimpleMLPModel instances with PyTorch default random initialization; no real dataset is loaded or used for training",
+      "data_generator.py:16-30 — SimpleMLPModel is a plain MLP (784->64->64->10) instantiated with random weights, never trained on any data",
+      "data_generator.py:68-102 — apply_permutation_symmetry() uses torch.randperm() to generate permutation variants of randomly-initialized models",
+      "data_generator.py:126-141 — apply_noise_perturbation() adds torch.randn_like() Gaussian noise to model weights",
+      "data_generator.py:105-123 — apply_scaling_symmetry() uses np.random.uniform() for scale factors",
+      "data_generator.py:144-163 — inject_backdoor() adds torch.randn() perturbations to simulate backdoors",
+      "config.py:17 — ARCHITECTURES = ['mlp'] with no dataset loading configuration",
+      "log.txt confirms experiment ran: 20 base models, 80 symmetry variants, 10 backdoored models — all generated synthetically without any real data training",
+      "No imports of torchvision.datasets, datasets.load_dataset, or any real dataset loading anywhere in the codebase"
+    ]
+  }
+}

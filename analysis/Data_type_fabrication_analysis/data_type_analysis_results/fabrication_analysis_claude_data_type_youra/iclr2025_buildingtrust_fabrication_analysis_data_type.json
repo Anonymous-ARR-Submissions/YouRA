@@ -1,0 +1,19 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_buildingtrust.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_buildingtrust/docs/youra_research/20260317_buildingtrust",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data_loader.py:17 — load_dataset(self.cfg['hf_id'], ...) using datasets.load_dataset() from HuggingFace",
+      "h-e1/code/data_loader.py:4 — 'from datasets import load_dataset' imports HuggingFace datasets library",
+      "h-e1/code/config.py — DATASETS configured with real benchmarks: cais/mmlu (test split), truthful_qa (multiple_choice, validation), allenai/ai2_arc (ARC-Challenge, test)",
+      "h-e1/code/model_runner.py:31 — AutoModelForCausalLM.from_pretrained(model_id) loads real pretrained HuggingFace models",
+      "h-e1/code/model_runner.py:28 — AutoTokenizer.from_pretrained(model_id) loads real tokenizers",
+      ".data_cache/datasets/cais___mmlu/all/0.0.0/ — contains actual downloaded Arrow files (mmlu-test.arrow, mmlu-dev.arrow, etc.)",
+      ".data_cache/datasets/truthful_qa/ and .data_cache/datasets/allenai___ai2_arc/ — real dataset caches present",
+      "h-e1/cache/ — 18 .npy cache files (e.g., pair2_base_mmlu.npy at 224KB = ~14042 items × 4 × float32) confirm real model inference was executed",
+      "h-e1/experiment_results.json — contains detailed numerical results (eigenvalues, p-values, anisotropy ratios) consistent with actual computation",
+      "h-m2/experiment_results.json — run_timestamp: 2026-03-17T04:06:33 with detailed per-dataset quintile variances from actual execution"
+    ]
+  }
+}

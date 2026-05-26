@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/ai_scientist/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_scope.pdf",
+  "experiment_folder": "/home/anonymous/ai_scientist/experiments_sonnet45/2026-05-18_06-11-49_sparse_routing_peft_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "The main paper-facing run loads real datasets with `load_dataset(\"imdb\", split=\"train[:2000]\")`, `load_dataset(\"ag_news\", split=\"train[:2000]\")`, and `load_dataset(\"glue\", \"sst2\", split=\"train[:2000]\")` in `experiments_sonnet45/2026-05-18_06-11-49_sparse_routing_peft_attempt_0/logs/0-run/experiment_results/experiment_44109726c2524d12962587f240549da1_proc_71381/experiment_code.py:300,305,310`.",
+      "The same main run uses DistilBERT via `AutoTokenizer.from_pretrained(\"distilbert-base-uncased\")` and `AutoModel.from_pretrained(...)` in `.../experiment_44109726c2524d12962587f240549da1_proc_71381/experiment_code.py:77,87`, matching a real-data HuggingFace workflow rather than a synthetic generator.",
+      "Ablation runs referenced by the figure aggregator also load the same real datasets: `experiment_0afbe67b.../experiment_code.py:382,387,392`, `experiment_e70ff0c0.../experiment_code.py:319,324,329`, `experiment_26574e42.../experiment_code.py:322,327,332`, and `experiment_40a1c599.../experiment_code.py:338,343,348`.",
+      "The main run saves actual outputs with `np.save(..., \"experiment_data.npy\")` in `.../experiment_44109726c2524d12962587f240549da1_proc_71381/experiment_code.py:429`; the saved file contains experiment results for `imdb`, `agnews`, and `sst2` with metrics/loss histories."
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_verifai/iclr2025_verifai.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_verifai",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_verifai/claude_code/data.py:30 defines `generate_problem_dataset(...)`, and the file manually constructs ten `ProgrammingProblem(...)` objects instead of loading a real external dataset.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_verifai/claude_code/data.py:32 seeds Python `random`, and `run_experiment.py:181-185` generates and saves `problems_dataset.json`, indicating an internally generated benchmark.",
+      "A search for real-dataset loaders (`datasets.load_dataset`, `torchvision.datasets`, `pd.read_csv`, `download=True`) in `claude_code/` returned no matches.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_verifai/claude_code/generate_mock_results.py:2 describes the run as `Generate mock experimental results for demonstration purposes`, and lines 18, 24-36, 58, 74, and 80 use `np.random` / `random.uniform` with preset success-rate assumptions to synthesize outcome values.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_verifai/claude_code/log.txt:28-29 shows the real experiment failed to call the model (`api_key client option must be set`, `Initial code generated (0 chars)`), while lines 698-703 and 801 record a later `LLM_MODEL: simulated` run and `Mock experiment completed successfully!`."
+    ]
+  }
+}

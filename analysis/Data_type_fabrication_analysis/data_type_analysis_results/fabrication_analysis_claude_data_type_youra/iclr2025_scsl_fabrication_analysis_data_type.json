@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_scsl.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_scsl/docs/youra_research/20260318_scsl",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data/dataset.py:12 — WaterbirdsDataset class loads real Waterbirds benchmark data from metadata.csv and image files via pd.read_csv and PIL.Image.open",
+      "h-e1/code/data/dataset.py:44-46 — metadata_path = os.path.join(root_dir, 'metadata.csv'); self.metadata = pd.read_csv(metadata_path)",
+      "h-e1/code/data/dataset.py:76-77 — img_path = os.path.join(self.root_dir, row['img_filename']); image = Image.open(img_path).convert('RGB')",
+      "h-e1/code/run_experiment.py:28 — from data.dataset import WaterbirdsDataset — uses real Waterbirds dataset (Sagawa et al., 2020)",
+      "h-e1/code/run_experiment.py:263-264 — train_dataset_base = WaterbirdsDataset(args.data_root, 'train', transform=None) — loads actual training data",
+      "_archive/20260319T091925_routing_recovery/h-e1/code/data/waterbirds_v1.0/ — actual Waterbirds image files (e.g., Orchard_Oriole_*.jpg) present in experiment folder",
+      "h-e1/code/data/dataset.py:55-56 — expected_counts = {'train': 4795, 'val': 1199, 'test': 5794} — matches real Waterbirds dataset statistics",
+      "No np.random, SyntheticDataset, generate_synthetic, or hardcoded result arrays found in experiment code"
+    ]
+  }
+}

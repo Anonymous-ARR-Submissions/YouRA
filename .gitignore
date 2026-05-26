@@ -1,0 +1,17 @@
+.env
+**/.env
+.omc/
+**/.omc/
+.omx/
+**/.omx/
+.vscode/
+__pycache__/
+**/__pycache__/
+.codex/*
+!.codex/agents/
+!.codex/agents/**
+!.codex/skills/
+!.codex/skills/**
+.codex/skills/.system/**
+!.codex/prompts/
+!.codex/prompts/**

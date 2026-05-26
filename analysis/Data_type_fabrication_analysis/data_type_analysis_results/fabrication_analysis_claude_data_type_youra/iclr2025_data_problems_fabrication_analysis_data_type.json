@@ -1,0 +1,15 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_data_problems.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_data_problems/docs/youra_research/20260317_data_problems",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1-v2/code/data_collection.py:30 — `from datasets import load_dataset` followed by `dataset = load_dataset(config.LEADERBOARD_DATASET, split='train')` loads the real Open LLM Leaderboard v2 dataset (open-llm-leaderboard/contents) from HuggingFace Datasets",
+      "h-e1-v2/code/data_collection.py:137 — `from huggingface_hub import ModelCard, HfApi` followed by real API calls: `ModelCard.load(model_id)` and `api.model_info(model_id)` to retrieve actual model cards from HuggingFace Hub",
+      "h-e1-v2/data/registry.csv — 4,493 rows of real model data with actual benchmark scores (e.g., meta-llama/Llama-2-13b-chat-hf with avg_score=11.13, real IFEval/BBH/MATH/GPQA/MUSR/MMLU-PRO scores)",
+      "h-e1-v2/code/analysis.py:103 — `smf.ols(formula, data=df).fit()` performs real OLS regression using statsmodels on the collected registry data",
+      "h-e1-v2/experiment_results.json — experiment completed with real results: n_analyzable=4493, baseline_r2=0.4247, beta_docs=-3.452, p_value=1.145e-08",
+      "h-e1-v2/data/summary_stats.json — contains detailed real statistics: feature_fractions, doc_score_counts ({0: 4337, 1: 144, 2: 10, 3: 2}), benchmark_availability all at 1.0"
+    ]
+  }
+}

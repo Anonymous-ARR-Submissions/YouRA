@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_scope/iclr2025_scope.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scope",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "run_experiment.py:459 — load_dataset('narrativeqa', split='test', trust_remote_code=True) loads the real NarrativeQA benchmark dataset from HuggingFace",
+      "run_experiment.py:486 — fallback to load_dataset('squad', split='validation') (another real dataset), though NarrativeQA loaded successfully",
+      "run_experiment.py:188 — uses real pre-trained model facebook/opt-125m via AutoModel.from_pretrained()",
+      "log.txt:33 — 'Loaded 200 samples from NarrativeQA' confirms real dataset was successfully loaded and used",
+      "log.txt:36 — 'Using device: cuda' confirms actual GPU execution",
+      "log.txt:65-69 — training logs show 3 epochs with real loss values (Epoch 1: Loss=0.0232, Retention Rate=0.070; Epoch 2: Loss=0.0022; Epoch 3: Loss=0.0028)",
+      "log.txt:74-77 — evaluation results for none (Retention: 1.000, Latency: 0.0206s) and static (Retention: 0.500, Latency: 0.0206s) methods logged",
+      "experiment_results.json contains 50 per-sample latency measurements with realistic variation (e.g., 0.0224s to 0.0213s for 'none' method)"
+    ]
+  }
+}

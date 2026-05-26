@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_scope.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_scope/docs/youra_research/20260318_scope",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-m1/code/src/config.py:15 — model_name: str = 'mistralai/Mistral-7B-v0.1' (real pre-trained model)",
+      "h-m1/code/src/data.py:30 — load_dataset('allenai/c4', 'en', split='train', streaming=True, trust_remote_code=True) (real dataset)",
+      "h-e1/code/src/data.py:29 — load_dataset('openwebtext', split='train', streaming=True) (real dataset)",
+      "h-m1/code/src/analyzer.py:127-137 — Extracts actual Q/K projection weights from model: layer.self_attn.q_proj.weight.detach(), layer.self_attn.k_proj.weight.detach()",
+      "h-m1/code/src/main.py:58-66 — AutoModelForCausalLM.from_pretrained(model_name) loads real pre-trained weights",
+      "h-m1/experiment_run_real.log — Shows actual Mistral-7B checkpoint shard loading (2 shards, ~14 seconds)",
+      "h-m1/results/mechanism_validation.json — 2MB file with actual singular values per layer (e.g., layer 20: r_eff_q=2862, r_eff_k=908, r_eff_v=968)",
+      "h-m1/experiment_results.json — Real results: max_rank=1647.67, entropy_slope=0.001453, p_value=0.0720"
+    ]
+  }
+}

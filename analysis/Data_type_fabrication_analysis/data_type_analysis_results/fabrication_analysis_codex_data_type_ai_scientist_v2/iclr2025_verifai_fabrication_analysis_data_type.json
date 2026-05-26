@@ -1,0 +1,15 @@
+{
+  "paper_file": "/home/anonymous/ai_scientist/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_verifai.pdf",
+  "experiment_folder": "/home/anonymous/ai_scientist/experiments_sonnet45/2026-05-18_14-48-19_spec_aware_probabilistic_decoding_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiments_sonnet45/2026-05-18_14-48-19_spec_aware_probabilistic_decoding_attempt_0/logs/0-run/experiment_results/experiment_87c67a384a354ee1be00f04a78cc40d0_proc_157354/experiment_code.py:66-131 defines an in-memory CodeSpecificationDataset with four simple tasks (add, multiply, absolute, maximum), indicating synthetic task construction rather than a real benchmark-backed dataset object.",
+      "experiments_sonnet45/2026-05-18_14-48-19_spec_aware_probabilistic_decoding_attempt_0/logs/0-run/experiment_results/experiment_87c67a384a354ee1be00f04a78cc40d0_proc_157354/experiment_code.py:544-551 loads CodeXGLUE, CodeSearchNet, and MBPP, but 567-575 evaluates by cycling problem_idx = i % len(dataset.problems), so the loaded benchmark samples are not actually used for generation/evaluation.",
+      "experiments_sonnet45/2026-05-18_14-48-19_spec_aware_probabilistic_decoding_attempt_0/logs/0-run/experiment_results/experiment_f9814da3540d4f239545f325ef24c985_proc_141617/experiment_code.py:622-635 loads benchmark datasets, then 652-653 explicitly comments '# Use a synthetic problem as proxy for evaluation' before reusing dataset.problems.",
+      "Search across many experiment_code.py files in the experiment folder found the repeated pattern load_dataset(...) followed by problem_idx = i % len(dataset.problems), showing the proxy-evaluation design is not isolated to one run.",
+      "The experiment folder contains executed outputs such as multiple experiment_data.npy files and generated PNGs under logs/0-run/experiment_results/, confirming experiments were run even though the effective evaluation data path is synthetic.",
+      "experiment_87c67a384a354ee1be00f04a78cc40d0_proc_157354/experiment_data.npy stores 'synthetic', 'code_x_glue', 'code_search_net', and 'mbpp' result blocks; the benchmark blocks have nearly identical perplexity and structural-validity arrays, consistent with reuse of the same synthetic proxy evaluation rather than distinct real-dataset behavior."
+    ]
+  }
+}

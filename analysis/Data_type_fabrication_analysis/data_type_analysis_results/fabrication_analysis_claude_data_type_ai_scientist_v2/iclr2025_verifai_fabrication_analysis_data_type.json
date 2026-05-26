@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/ai_scientist/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_verifai.pdf",
+  "experiment_folder": "/home/anonymous/ai_scientist/experiments_sonnet45/2026-05-18_14-48-19_spec_aware_probabilistic_decoding_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiments/best_solution_c4262c475a0b4d0da93e06c9567fbb2a.py: CodeSpecificationDataset class creates a fully synthetic dataset with hardcoded vocabulary (~55 tokens) and 4 simple problems (add, multiply, abs, max) with hardcoded reference solutions and test inputs",
+      "experiments/best_solution_2096d7400118411e9bb6cf49276ec250.py: Same synthetic CodeSpecificationDataset with identical 4 problems, no real dataset loading at all",
+      "experiments/best_solution_c4262c475a0b4d0da93e06c9567fbb2a.py:654-660: Code loads HuggingFace datasets (CodeXGLUE, CodeSearchNet, MBPP) via load_dataset(), but at line 675 uses 'problem_idx = i % len(dataset.problems)' where 'dataset' is the synthetic CodeSpecificationDataset — the real dataset content is never used for generation or evaluation",
+      "experiments/best_solution_c4262c475a0b4d0da93e06c9567fbb2a.py:455-538: Model training uses only synthetic dataset problems with hardcoded reference token sequences",
+      "experiments/best_solution_c4262c475a0b4d0da93e06c9567fbb2a.py:674: 'for i in range(min(len(samples), 20))' — real dataset samples only provide loop iteration count; actual code generation and specification scoring use synthetic problems exclusively"
+    ]
+  }
+}

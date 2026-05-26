@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_verifai.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_verifai/docs/youra_research/20260318_verifai",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/run_experiment.py: uses 'from evalplus.data import get_human_eval_plus' (line 62) to load real HumanEval+ dataset (164 tasks)",
+      "h-e1/code/run_experiment.py: uses 'codellama/CodeLlama-7b-hf' via AutoModelForCausalLM.from_pretrained (line 93) for real model inference",
+      "h-m1/code/run_experiment_h_m1.py: uses 'from evalplus.data import get_human_eval_plus' (line 99) and real CodeLlama-7B generation with subprocess mypy --strict verification",
+      "h-m1/code/experiment_run_fixed.log: confirms real execution on 35 tasks (35/35 completed), real model loaded, real mypy verification — 697/700 mypy failures detected",
+      "h-m2/code/run_experiment_h_m2.py: uses real HumanEval+ and CodeLlama-7B but crashed with TypeError at line 99 before producing results",
+      "h-m3/code/run_experiment.py: designed for real HumanEval+ and CodeLlama-7B inference but was never run; run_mock_experiment.py was used instead with random.random() simulated pass/fail",
+      "h-e1/code/outputs/results.json: marked 'mode: MOCK' — the actual experiment run (experiment_run.log) only processed 5/164 tasks before stopping",
+      "h-m3/code/outputs/experiment_results.json: marked 'mode: MOCK' — mock simulation with 'def solution(): pass  # Mock generated code'"
+    ]
+  }
+}

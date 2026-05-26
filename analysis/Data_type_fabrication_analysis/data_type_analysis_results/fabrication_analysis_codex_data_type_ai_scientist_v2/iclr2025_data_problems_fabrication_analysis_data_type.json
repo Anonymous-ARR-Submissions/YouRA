@@ -1,0 +1,12 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_data_problems.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_00-43-10_representation_guided_data_mixing_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "Representative run code at logs/0-run/experiment_results/experiment_e3032cc014bc4edd880289f8a18667c8_proc_1112847/experiment_code.py:108-156 optionally loads TinyStories/OpenWebText, but generates Wikipedia/code/scientific/conversational with np.random.randint and falls back to random generation for TinyStories/OpenWebText when loading fails.",
+      "The same synthetic pattern repeats across many run directories: rg over logs/0-run/experiment_results/*/experiment_code.py found repeated load_dataset calls together with np.random.randint for the domain construction paths (for example experiment_37a072... lines 94-146, experiment_108525... lines 89-135, experiment_487359... lines 106-158).",
+      "The experiment runner saves actual outputs with np.save(..., 'experiment_data.npy') at logs/0-run/experiment_results/experiment_e3032cc014bc4edd880289f8a18667c8_proc_1112847/experiment_code.py:808-809, and the folder contains 37 experiment_data.npy files, confirming executed experiments rather than fabricated-only plotting."
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_bi_align.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_bi_align/docs/youra_research/20260317_bi_align",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data_loader.py:31-35 loads the real Hugging Face dataset `Anthropic/hh-rlhf` via `load_dataset(...)`.",
+      "h-e1/code/data_loader.py:81-107 iterates over dataset examples and extracts real `chosen` and `rejected` responses rather than generating synthetic text.",
+      "h-m-integrated/code/paired_data_loader.py:39-67 reuses the same HH-RLHF loader and organizes matched chosen/rejected pairs from the loaded dataset.",
+      "h-e1/experiment.log:14-20 shows an actual run loading HH-RLHF train/test splits and then extracting 338,704 total responses before sampling.",
+      "h-m-integrated/results/statistics.json:4-10 records a completed run on `Anthropic/hh-rlhf` with 169,352 total pairs (160,800 train; 8,552 test)."
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_mldpr.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_mldpr/docs/youra_research/20260318_mldpr",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data/data_collector.py:88-93 — Fetches datasets from HuggingFace Hub API: requests.get('https://huggingface.co/api/datasets', ...)",
+      "h-e1/code/data/data_collector.py:214-219 — Fetches datasets from OpenML API: requests.get('https://www.openml.org/api/v1/json/data/list/limit/100', ...)",
+      "h-e1/code/data/data_collector.py:301-306 — Scrapes UCI ML Repository: requests.get('https://archive.ics.uci.edu/ml/datasets.php', ...)",
+      "h-e1/code/data/metadata_sample/metadata_fields.csv — Contains real HuggingFace metadata: real authors (openai, nvidia), real download counts (363056), real dataset descriptions",
+      "h-m-integrated/code/models/embedding_model.py:25 — Uses real pretrained model: SentenceTransformer('all-MiniLM-L6-v2')",
+      "h-m-integrated/code/models/clustering_pipeline.py:35-41 — Uses real sklearn KMeans clustering on actual embeddings",
+      "h-e1/code/run_experiment.py:128 — Uses SentenceTransformer('all-MiniLM-L6-v2') for embedding generation",
+      "h-e1/code/run_experiment.py:139 — Uses sklearn LogisticRegression for linear probe training",
+      "Data collector has fallback hardcoded samples (lines 155-173) but only used when API fails; the CSV shows real API data was successfully collected"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_scsl/iclr2025_scsl.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl/results/log.txt:6 shows the executed dataset was `colored_mnist`.",
+      "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl/claude_code/data_loader.py:23-29 loads MNIST via `datasets.MNIST(..., download=True)` and then injects a spurious color-label correlation with `np.random`, indicating an artificially constructed benchmark rather than untouched real data.",
+      "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl/claude_code/data_loader.py:157-168 shows the executed `colored_mnist` path in `get_data_loaders`, while the `waterbirds` branch was not the one run.",
+      "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl/claude_code/run_experiment.py:253-261 saves non-empty experiment outputs to `results.json`, and `/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl/results/results.json` contains actual metrics for ERM, JTT, GroupDRO, and AMR."
+    ]
+  }
+}

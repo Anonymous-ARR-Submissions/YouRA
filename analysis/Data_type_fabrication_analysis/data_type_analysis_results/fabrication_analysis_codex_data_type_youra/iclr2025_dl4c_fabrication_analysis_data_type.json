@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_dl4c.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_dl4c/docs/youra_research/20260317_dl4c",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/run_mock_experiment.py:19-64 generates mock signatures with `np.random.uniform(...)`, and h-e1/code/run_mock_experiment.py:95-178 saves those synthetic values to `h-e1/results/signatures.csv` and `h-e1/results/metrics.csv`.",
+      "h-e1/results/signatures.csv:2-5 contains four smooth mock-style rows (phi-2, codegen-350M-mono, codegen-350M-nl, CodeGPT-small-py), and h-e1/results/metrics.csv:2 reports Cohen's d = 7.834956449179166, matching the paper's simulated H-E1 result.",
+      "iclr2025_dl4c.md:224-230 says the primary proof-of-concept validation used simulated performance data, and iclr2025_dl4c.md:238-246 reports the headline H-E1 finding as simulated Cohen's d = 7.835.",
+      "Real-data code and outputs also exist, but only as a secondary minimal validation: h-e1/code/data_loader.py:17-37 loads `evalplus/humanevalplus`, h-e1/code/run_experiment_poc.py:98-160 profiles sampled HumanEval+ tasks, and h-m-integrated/code/results/mechanism_results.json:2-25 plus h-m-integrated/code/results/model_ranks.csv:2-4 capture the separate 3-model real-analysis path. Because the schema has no 'Mixed' label, the paper is classified as Synthetic since its headline H-E1 effect size and current source result files are synthetic/mock."
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_scsl.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_scsl/docs/youra_research/20260318_scsl",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data/dataset.py:43-48 loads Waterbirds metadata from metadata.csv with pd.read_csv, and h-e1/code/data/dataset.py:75-77 opens image files from img_filename.",
+      "h-m-integrated/code/config.py:83-86 sets DATA_CONFIG['root_dir'] to .data_cache/datasets/waterbird_complete95_forest2water2.",
+      "h-e1/code/data/waterbirds/metadata.csv:1-5 contains benchmark image filenames and labels from the Waterbirds dataset.",
+      "h-m-integrated/code/run_validation.py:91-110 loads trained checkpoints and re-extracts embeddings from WaterbirdsDataset; h-m-integrated/code/run_validation.py:137-178 and h-m-integrated/code/run_validation.py:197-259 compute AMI and delta-WGA from those checkpoint-derived embeddings.",
+      "h-m-integrated/code/experiment_log.txt:12-15 records an actual training run on Waterbirds ('Loading Waterbirds dataset...', 'Train samples: 4795', 'Training for 20 epochs...'), and checkpoints are present under h-m-integrated/code/checkpoints/{simclr,lassl}/seed_0."
+    ]
+  }
+}

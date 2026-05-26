@@ -1,0 +1,17 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_dl4c.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_dl4c/docs/youra_research/20260317_dl4c",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/run_mock_experiment.py:generate_mock_signatures (lines 18-63): All signatures generated via np.random.uniform() with hardcoded ranges per alignment type (execution: correctness 0.65-0.75, preference: 0.50-0.60, baseline: 0.30-0.45)",
+      "h-e1/results/signatures.csv: Values (correctness=0.687, 0.516, 0.303, 0.328) match the np.random.uniform ranges in generate_mock_signatures exactly",
+      "h-e1/results/metrics.csv: cohens_d=7.835, silhouette=0.320, purity=1.0 — all derived from simulated data",
+      "h-e1/code/data_loader.py:HumanEvalPlusLoader.load_dataset (line 22): Uses load_dataset('evalplus/humanevalplus') — a real dataset exists in the code, but it was never successfully used to produce results",
+      "h-e1/code/run_minimal_real.py: Attempted real model inference but CRASHED at line 129 with TypeError: ModelManager.__init__() got an unexpected keyword argument 'model_name' — confirmed in minimal_real_run.log",
+      "minimal_real_run.log: Shows real experiment failed at model loading stage — no real profiling data was ever generated",
+      "h-m-integrated/code/data_loader.py:H_E1_ResultsLoader (lines 7-45): Loads signatures.csv from h-e1/results/ — which contains only mock/simulated data",
+      "h-m-integrated/code/config.py:13: H_E1_RESULTS_PATH points to h-e1/results/signatures.csv (mock data)"
+    ]
+  }
+}

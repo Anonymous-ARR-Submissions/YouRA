@@ -1,0 +1,18 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_question.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_question/docs/youra_research/20260318_question",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/data.py:85-96 — uses torchvision datasets.MNIST(root=data_root, train=True, download=True, transform=transform) for MNIST loading",
+      "h-e1/code/data.py:98-109 — uses torchvision datasets.FashionMNIST(root=data_root, train=True, download=True, transform=transform) for Fashion-MNIST loading",
+      "h-m2/code/data_loader.py:21 — uses datasets.MNIST(root=h_m2_data, train=train, download=False, transform=transform) with pre-downloaded MNIST data",
+      "h-m2/data/ — contains actual downloaded real datasets: MNIST/raw/, FashionMNIST/raw/, cifar-10-batches-py/, cifar-100-python/",
+      "h-m3/code/data_loader.py:41 — loads h-e1 experiment results via pd.read_csv(csv_path) from experiment_logs.csv",
+      "h-e1/code/results/variance_summary.json — contains actual experiment results with mean accuracies (97.95% MNIST, 98.15% MNIST 2-layer) consistent with real MNIST performance",
+      "h-m1/results/summary.json — contains actual experiment results with timestamps showing real execution (2026-03-21T02:22:07)",
+      "h-m2/results/analysis_results.json — contains actual results with 30 seeds, pairwise distances, and p-values from real training runs",
+      "h-m3/code/results/bootstrap_results.json — contains bootstrap analysis results computed from h-e1 real experiment data"
+    ]
+  }
+}

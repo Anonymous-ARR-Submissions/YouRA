@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_scsl/iclr2025_scsl.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_scsl",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "claude_code/data_loader.py:22 — Uses `datasets.MNIST(root, train=train, download=True)` to load real MNIST digits from torchvision",
+      "claude_code/data_loader.py:33-49 — `_create_spurious_colors()` synthetically generates color labels using `np.random.rand()` to create spurious correlations between color and digit class",
+      "claude_code/data_loader.py:16-31 — ColoredMNIST.__init__ creates a synthetic benchmark by applying artificial color manipulation to real MNIST data with configurable spurious_correlation parameter",
+      "Dataset is Colored MNIST: real MNIST digits with synthetically applied color spurious features — qualifies as Synthetic (experiments run on artificially generated/modified data)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_buildingtrust/iclr2025_buildingtrust.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "Real benchmark questions are loaded from Hugging Face datasets in `mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust/claude_code/data_processing.py:24` (`load_dataset('trivia_qa', ...)`) and `mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust/claude_code/data_processing.py:55` (`load_dataset('commonsense_qa', ...)`).",
+      "The actual experiment runner uses simulated model outputs rather than real LLM API calls: `mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust/claude_code/run_experiment_mock.py:18` imports `MockModelSystem`, `.../run_experiment_mock.py:82` instantiates it, and `.../run_experiment_mock.py:99` logs `Collected mock responses`.",
+      "Execution artifacts confirm the run used mock responses: `mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust/results/log.txt:2` says `ADAPTIVE CONFIDENCE CALIBRATION EXPERIMENT (MOCK MODELS)`, and lines 17, 23, and 29 report collected mock responses for train/val/test.",
+      "Synthetic fallback dataset creators also exist in `mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_buildingtrust/claude_code/data_processing.py:93` and `.../data_processing.py:122`, reinforcing that this codebase explicitly supports artificial data generation."
+    ]
+  }
+}

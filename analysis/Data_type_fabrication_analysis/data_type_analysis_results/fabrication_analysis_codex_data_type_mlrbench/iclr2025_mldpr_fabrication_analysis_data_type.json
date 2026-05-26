@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment_paper/iclr2025_mldpr/iclr2025_mldpr.md",
+  "experiment_folder": "/home/anonymous/mlbench copy/mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr/claude_code/dataset_generator.py:12 describes the core generator as \"Simulates dataset evolution across multiple versions.\"",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr/claude_code/dataset_generator.py:16,32,38 seed and generate samples/labels with np.random.randn and np.random.choice rather than loading a real dataset.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr/claude_code/evaluation.py:33-41 explicitly says it will \"Simulate reproduction attempts\" for experiment 1.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr/claude_code/evaluation.py:122-123 and 167-168 instantiate DatasetEvolutionSimulator and PaperSimulator to generate versions and papers.",
+      "mlrbench/MLRagent_tasks_youra_result_sonnet45_experiment/iclr2025_mldpr/results/log.txt records a successful run on 2026-01-29 that saved experiment_results.json and summary_metrics.json, so the results are executed synthetic experiments rather than fabricated-only text."
+    ]
+  }
+}

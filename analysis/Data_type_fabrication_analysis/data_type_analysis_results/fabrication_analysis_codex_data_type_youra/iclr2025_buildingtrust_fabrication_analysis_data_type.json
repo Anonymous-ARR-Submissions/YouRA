@@ -1,0 +1,14 @@
+{
+  "paper_file": "/home/anonymous/YouRA_results_new_4_sonnet45/grounded_rewrite_sonnet45_opus46_vanilla_new/iclr2025_buildingtrust.md",
+  "experiment_folder": "/home/anonymous/YouRA_results_new_4_sonnet45/TEST_buildingtrust/docs/youra_research/20260317_buildingtrust",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "h-e1/code/config.py:16-19 declares real Hugging Face benchmark datasets: cais/mmlu, truthful_qa (multiple_choice), and allenai/ai2_arc (ARC-Challenge).",
+      "h-e1/code/data_loader.py:15-22 loads the benchmark data with load_dataset(self.cfg[\"hf_id\"], self.cfg[\"config\"], split=self.cfg[\"split\"]).",
+      "h-e1/code/experiment.log:7-9 records successful real-dataset loads with counts mmlu=14042, truthfulqa=817, arc=1172.",
+      "h-e1/code/model_runner.py:51-53, 86-89, and 106-139 loads or saves per-item 4-choice logprob arrays as .npy caches for each base/aligned model pair and dataset.",
+      "h-m2/code/analysis_variance.py:50-83 reuses those H-E1 .npy caches via np.load(...); the only synthetic component is the explicitly labeled isotropic sanity control at h-m2/code/analysis_variance.py:348-365."
+    ]
+  }
+}

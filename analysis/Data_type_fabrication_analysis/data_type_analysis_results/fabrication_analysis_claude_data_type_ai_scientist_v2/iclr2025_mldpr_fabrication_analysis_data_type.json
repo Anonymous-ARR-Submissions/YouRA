@@ -1,0 +1,15 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_mldpr.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-12_10-10-30_dataset_change_documentation_attempt_0",
+  "data_type": "Synthetic",
+  "evidence": {
+    "data_type_evidence": [
+      "experiment_code.py:26 — np.random.seed(42) sets random seed for synthetic generation",
+      "experiment_code.py:29-41 — create_base_dataset() generates all data with np.random.randn(), np.random.randint(), np.random.choice()",
+      "experiment_code.py:14-23 — experiment_data structure uses 'synthetic_dataset' keys throughout",
+      "runfile.py (SpawnProcess-1):15 — dataset_names = ['synthetic_tabular', 'synthetic_text', 'synthetic_mixed']",
+      "No use of datasets.load_dataset, torchvision.datasets, pd.read_csv from external sources, or any real-world dataset loading",
+      "All experiment results stored in experiment_data.npy files (15+ files found) confirming actual experiment execution"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "paper_file": "/home/anonymous/YouRA_fabrication/Fabrication/FINAL_VANILLA/vanilla_sonnet45_new/iclr2025_wsl.pdf",
+  "experiment_folder": "/home/anonymous/YouRA_fabrication/Fabrication/experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0",
+  "data_type": "Real",
+  "evidence": {
+    "data_type_evidence": [
+      "experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0/logs/0-run/experiment_results/experiment_79a54ab2241e4185bfa451a44404a112_proc_374355/experiment_code.py:43-47 loads torchvision.datasets.CIFAR10 for train/test with download=True.",
+      "experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0/logs/0-run/experiment_results/experiment_79a54ab2241e4185bfa451a44404a112_proc_374355/experiment_code.py:49-52 creates train/test subsets and DataLoaders from CIFAR-10 data.",
+      "experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0/logs/0-run/experiment_results/experiment_79a54ab2241e4185bfa451a44404a112_proc_374355/experiment_code.py:592 saves experiment_data.npy, indicating a real executed run rather than only hardcoded arrays.",
+      "experiments_sonnet45/2026-05-13_16-29-58_symmetry_aware_weight_augmentation_attempt_0/logs/0-run/experiment_results contains 39 experiment_data.npy artifacts and 39 plotting_code.py files, consistent with repeated experiment executions."
+    ]
+  }
+}
