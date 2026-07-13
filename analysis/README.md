@@ -20,6 +20,34 @@ from the evaluation results under [`../results/`](../results/README.md).
 | [`MLRbench_hallucination_human_eval/`](MLRbench_hallucination_human_eval/) | Human validation of AI-judge hallucination flags with inter-rater reliability (details [below](#human-validation-of-hallucination-flags-mlrbench_hallucination_human_eval)). |
 | [`VSA/`](VSA/) | Recovery-routing telemetry analysis (routing-level CSVs and stacked-bar figure). |
 
+## Verifying the Statistics Quoted in the Author Responses
+
+Five self-contained checkers recompute, from the raw outputs bundled in this
+repository, every statistic quoted in the discussion-period author responses.
+Each script is standard-library only, locates the repository root by walking
+up from its own location (so it runs from any working directory in a fresh
+clone), prints one `[PASS]`/`[FAIL]` line per claim with the recomputed and
+quoted values side by side, and exits 0 iff everything passes. Each script
+also saves its full report to a `verify_*_results.txt` file next to itself;
+the bundled result files contain the committed run, carry no timestamps, and
+are reproduced byte-identically by re-running the script.
+
+| Script | Verifies (114 checks in total, all passing) |
+|:--|:--|
+| [`MLRbench_scores_analysis/verify_score_claims.py`](MLRbench_scores_analysis/verify_score_claims.py) | The persistence-versus-context (no-VSA) ablation table (all means/SDs/deltas), the 8/10 task direction with its exact paired permutation test (p = 0.092) and sign test (p = 0.109), the per-task transitions (dl4c 3.75 -> 2.50, question 2.25 -> 4.25, wsl 3.00 -> 4.50) and the single high Grok-4.3 scores behind the two exceptions, the MLR-Agent Sonnet 4.5 reference (Overall 3.10), the YouRA-vs-MLR-Agent contrast (+1.10, permutation p = 0.059), the six Table 1 first-place cells, and the Sonnet 4.6 scsl trace numbers (ratio 8.8, AUC 0.914) in the released artifacts. |
+| [`LLM_as_Judge_main/verify_pairwise_claims.py`](LLM_as_Judge_main/verify_pairwise_claims.py) | All six Table 2 win/tie/lose rows and the aggregates (72/33/15 vs MLR-Agent, 55/38/27 vs AI Scientist V2) recounted from the raw per-judge verdicts; the task-level 5 wins/5 ties/0 losses for the focal comparison with its sign test (p = 0.063); Fleiss' kappa recomputed from scratch for all six cells and cross-checked against `fleiss_kappa_summary.csv` (fair-to-moderate in five of six; -0.02 for YouRA vs MLR-Agent on Sonnet 4.6). |
+| [`MLRbench_hallucination_human_eval/verify_human_eval_claims.py`](MLRbench_hallucination_human_eval/verify_human_eval_claims.py) | Overall flag precision 203/270 = 75.2% with Wilson 95% CI 69.7-80.0; the four per-category precisions; per-system precision (68/90, 70/90, 65/90) with chi-square(2) = 0.75, p = 0.686; anchor reliability 69/90 = 76.7% with Cohen's kappa = 0.54; the 18-of-21 one-directional disagreements; and the YouRA-subset agreement 26/30 with kappa = 0.72. |
+| [`VSA/verify_routing_claims.py`](VSA/verify_routing_claims.py) | The routing telemetry: 29/40/18 = 87 archive-producing recovery events across the three backbones; 81 reset / 5 redesign / 1 unclassified; and that the two longest Sonnet 4.5 trajectories by archived recovery events are dl4c and question. |
+| [`Data_type_fabrication_analysis/verify_provenance_claims.py`](Data_type_fabrication_analysis/verify_provenance_claims.py) | The Sonnet 4.5 provenance diagnostic: YouRA 8/10 real-data-based under each of the two automated pipelines, versus 1/10 for MLR-Agent and 4/10 / 5/10 for AI Scientist V2. |
+
+```bash
+python analysis/MLRbench_scores_analysis/verify_score_claims.py
+python analysis/LLM_as_Judge_main/verify_pairwise_claims.py
+python analysis/MLRbench_hallucination_human_eval/verify_human_eval_claims.py
+python analysis/VSA/verify_routing_claims.py
+python analysis/Data_type_fabrication_analysis/verify_provenance_claims.py
+```
+
 ## Pairwise Judging (`LLM_as_Judge_main/`)
 
 The pairwise script loads `.env`, can prompt interactively if paths are omitted,

@@ -1,0 +1,14 @@
+[PASS] claude/youra task count: computed=10 claimed=10
+[PASS] claude/youra Real classifications: computed=8 claimed=8
+[PASS] claude/mlrbench task count: computed=10 claimed=10
+[PASS] claude/mlrbench Real classifications: computed=1 claimed=1
+[PASS] claude/ai_scientist_v2 task count: computed=10 claimed=10
+[PASS] claude/ai_scientist_v2 Real classifications: computed=4 claimed=4
+[PASS] codex/youra task count: computed=10 claimed=10
+[PASS] codex/youra Real classifications: computed=8 claimed=8
+[PASS] codex/mlrbench task count: computed=10 claimed=10
+[PASS] codex/mlrbench Real classifications: computed=1 claimed=1
+[PASS] codex/ai_scientist_v2 task count: computed=10 claimed=10
+[PASS] codex/ai_scientist_v2 Real classifications: computed=5 claimed=5
+
+12 passed, 0 failed.
