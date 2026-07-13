@@ -427,6 +427,31 @@ python analysis/MLRbench_hallucination_analysis/plot_hallucination_taxonomy_boun
 python analysis/MLRbench_hallucination_analysis/plot_hallucination_taxonomy_intersection.py
 ```
 
+### Human Validation of Hallucination Flags (Inter-rater Reliability)
+
+`analysis/MLRbench_hallucination_human_eval/` bundles the human evaluation of the AI-judge
+hallucination flags — 270 True/False judgments of whether each flagged
+hallucination actually exists (three anonymous annotators, 90 items each),
+together with the annotation GUIs — plus an inter-rater reliability check in
+which an anchor annotator blindly re-judged a stratified 90-item overlap.
+Pooled agreement is 76.7% (69/90) with Cohen's kappa = 0.541 (95% CI [0.37, 0.71],
+moderate). See `analysis/MLRbench_hallucination_human_eval/README.md` for the file
+inventory, the sampling design, and how the label ids and annotation GUIs
+resolve against this repository.
+
+```bash
+cd analysis/MLRbench_hallucination_human_eval
+
+# Pairwise/pooled agreement and Cohen's kappa -> reliability_result.json
+python reliability_analysis.py
+
+# Full report statistics -> report_stats.json (requires scipy)
+python report_stats.py
+
+# Regenerate the results report docx (requires python-docx)
+python build_reliability_report.py
+```
+
 ## Project Structure
 
 ```text
@@ -450,6 +475,7 @@ YouRA/
 |   +-- Data_type_fabrication_analysis/  # Real/Synthetic/Fabricated diagnostics
 |   +-- MLRbench_scores_analysis/     # Score table construction
 |   +-- MLRbench_hallucination_analysis/
+|   +-- MLRbench_hallucination_human_eval/  # Human validation of hallucination flags (inter-rater reliability)
 |   +-- VSA/                          # Recovery-routing telemetry analysis
 +-- results/
 |   +-- evaluations/                  # Evaluation outputs
