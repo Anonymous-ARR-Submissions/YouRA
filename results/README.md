@@ -34,12 +34,13 @@ Soundness, Significance, Overall — each `{score, strengths, weaknesses}`) plus
 
 ### Ablation Study (`mlrbench_overall_score/youra_ablation_study/`)
 
-Overall-review scores for five YouRA component-ablation conditions, each with
+Overall-review scores for six YouRA component-ablation conditions, each with
 4 judges × 10 tasks = 40 review JSONs:
 
 | Lane | Ablated component |
 |:--|:--|
 | `sonnet45_no_VSA` | Persistence-versus-context control: no durable verification-state files; equivalent state passed through prompt-visible context. |
+| `sonnet45_no_IC` | Independent-controller control: the GPT-5.2 controller route is disabled; controller-owned lifecycle/recovery decisions and debate/review moderation run from predefined static prompts (Sonnet 4.5). |
 | `sonnet45_no_mcp` | MCP tool stack removed (Sonnet 4.5). |
 | `sonnet45_no_reflection` | Reflection routing disabled (Sonnet 4.5). |
 | `sonnet46_no_mcp` | MCP tool stack removed (Sonnet 4.6). |
@@ -111,6 +112,7 @@ results/generations/youra/sonnet45/iclr2025_buildingtrust/docs/youra_research/20
 |:--|:--|
 | `sonnet45`, `opus45`, `sonnet46` | Full system per backbone (main-table runs). |
 | `sonnet45_no_VSA` | Persistence-versus-context control: the task model neither reads nor writes durable verification-state files; equivalent state is supplied as prompt-visible context, while harness-side shadow files (`.ablation_shadow/`) preserve identical stage transitions. |
+| `sonnet45_no_IC` | Independent-controller control: the GPT-5.2 controller route is disabled; controller-owned lifecycle and recovery decisions, plus debate and review moderation, run from predefined static prompts, while debate itself is conducted by the execution model. |
 | `sonnet45_no_mcp`, `sonnet46_no_mcp` | MCP tool stack removed. |
 | `sonnet45_no_reflection`, `sonnet46_no_reflection` | Reflection routing disabled. |
 

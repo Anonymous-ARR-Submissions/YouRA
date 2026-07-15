@@ -156,8 +156,9 @@ python analysis/MLRbench_scores_analysis/overall/build_overall_score_table.py
 
 Per-lane mean / sample-SD statistics for every ablation lane bundled under
 `results/evaluations/mlrbench_overall_score/youra_ablation_study/`
-(`sonnet45_no_VSA`, `sonnet45_no_mcp`, `sonnet45_no_reflection`,
-`sonnet46_no_mcp`, `sonnet46_no_reflection`). Aggregation matches Table 1:
+(`sonnet45_no_VSA`, `sonnet45_no_IC`, `sonnet45_no_mcp`,
+`sonnet45_no_reflection`, `sonnet46_no_mcp`, `sonnet46_no_reflection`).
+Aggregation matches Table 1:
 scores are averaged over the four judges within each task, then mean ± sample
 SD is taken across the ten tasks.
 
@@ -175,6 +176,14 @@ independently from those CSVs, cross-checks them against the summary CSV, and
 adds a per-judge breakdown. Both the script and the notebook are standard-library
 only and locate the repository root themselves, so they run from any working
 directory in a fresh clone.
+
+For the two substitution controls (`sonnet45_no_VSA`, `sonnet45_no_IC`),
+[`MLRbench_scores_analysis/compute_ablation_control_stats.py`](MLRbench_scores_analysis/compute_ablation_control_stats.py)
+additionally derives the full control statistics — lane summaries, unrounded
+deltas against the `sonnet45` baseline, per-task Overall direction, and the
+exact paired permutation / tie-excluded sign tests — directly from the raw
+judge JSONs, saving a deterministic report alongside as
+`compute_ablation_control_stats_results.txt`.
 
 ## VSA Recovery-Routing Analysis (`VSA/`)
 
